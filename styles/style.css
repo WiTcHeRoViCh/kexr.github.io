@@ -1,0 +1,31 @@
+body
+{
+background-color: #212121;
+}
+
+.zero
+{
+font-family: "Raleway";
+text-align: center;
+font-size: 2em;
+line-height: 1em;
+letter-spacing: 1px;
+color: #fff;
+}
+
+.one
+{
+font-family: "Raleway";
+text-align: center;
+font-size: 1em;
+font-weight: 800;
+letter-spacing: 1px;
+color: #fff;
+}
+
+.two
+{
+font-family: "Raleway";
+text-align: center;
+color: #fff;
+}
