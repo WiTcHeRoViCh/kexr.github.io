@@ -1,3 +1,5 @@
+/* global rules */
+
 *
 {
     box-sizing: border-box;
@@ -5,48 +7,67 @@
     margin: 0;
 }
 
-.item1 { grid-area: one; }
-.item2 { grid-area: two; }
-.item3 { grid-area: three; }
-.item4 { grid-area: four; }
-.item5 { grid-area: five; }
-
-.wrapper 
+body
 {
-    display: grid;
-    grid-template-areas:
-        'one one'
-        'two three'
-        'four five'
+    overflow-x: hidden;
+    overflow-y: overlay;
+    width: 100vw;
+    height: 100vh;
 }
 
-.item1
+/* flex framework */
+
+.wrapper
 {
-    height: 20vh;
-    line-height: 20vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.header, .bar, .box
+{
     text-align: center;
+}
+
+/* block colors */
+
+.header, .box
+{
     background-color: #000;
 }
 
-.item2, .item3
+.bar
 {
-    height: 20vh;
-    width: 50vw;
-    line-height: 10vh;
-    text-align: center;
     background-color: #fff;
+
 }
 
-.item4, .item5
+/* embeds & images */
+
+img, iframe
 {
-    height: 60vh;
-    width: 50vw;
-    padding: 5%;
-    text-align: center;
-    background-color: #000;
+    border: 1px solid #fff;
 }
 
-.h1
+iframe
+{
+}
+
+.extlink
+{
+    border: 0;
+    opacity: 1;
+}
+
+.extlink:hover, .extlink:active
+{
+    opacity: 0.75;
+}
+
+/* typograpy */
+
+h1
 {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -55,7 +76,7 @@
     color: #fff;
 }
 
-.h2a
+h2
 {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -64,7 +85,7 @@
     color: #000;
 }
 
-.h2b
+.h2a
 {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -73,25 +94,56 @@
     color: #fff;
 }
 
-p
+.pa
 {
+    text-align: left;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1em;
     color: #fff;
 }
 
-.extlink
+/* responsive design */
+
+@media only screen and (max-width: 600px)
 {
-    opacity: 1;
+.header, .bar, .box
+{
+    width: 100vw;
+    height: auto;
+}
+.bar, .box
+{
+    box-sizing: border-box;
+    padding: 2%;
+}
+audio, iframe
+{
+    width: 80vw;
+}
 }
 
-.extlink:hover
+@media only screen and (min-width: 600px)
 {
-    opacity: 0.75;
+.header
+{
+    width: 100vw;
+    height: 20vh;
+    line-height: 20vh;
 }
 
-.extlink:active
+.bar
 {
-    opacity: 0.75;
+    white-space: nowrap;
+    width: 50vw;
+    height: 20vh;
+    line-height: 10vh;
+}
+    
+.box
+{
+    width: 50vw;
+    height: 60vh;
+    padding: 2.5%;
+}
 }
