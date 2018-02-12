@@ -4,11 +4,13 @@
 <head>
 
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>KEXR</title>
 <link rel="shortcut icon" href="images/kexr_logo.png" type="image/x-icon">
 <link rel="stylesheet" href="styles/style.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,800|Roboto" rel="stylesheet">
-
+    
 </head>    
 
 <body>
@@ -22,21 +24,24 @@
         </div>
         <div class="bar">
             <h2>JOIN THE COMMUNITY</h2>
-            <a href="https://discord.gg/n5wz29J"><img class="extlink" src="images/Discord-Logo+Wordmark-Black.png" alt="KEXR Discord" height="50vh"></a>
+            <a href="https://discord.gg/n5wz29J">
+                <img class="extlink" id="discordimg" src="images/Discord-Logo+Wordmark-Black.png" alt="KEXR Discord">
+            </a>
         </div>
         <div class="box">
             <p class="h2a">About</p>
             <br>
             <p class="pa">
-    KEXR is a Discord server disguised as a terrestial radio station (it isn't one).<br><br>
-    We play classic alternative rock from the 90s and late 80s and reminisce about old games.
-    We run a FocaBot and a relayed audio stream that can be listened to outside of Discord.<br><br>
-    Think of KEXR as a bar with a jukebox.<br>
+                KEXR is a Discord server disguised as a terrestial radio station (it isn't one).<br><br>
+                We play classic alternative rock from the 90s and late 80s and reminisce about old games.
+                We run a FocaBot and a relayed audio stream that can be listened to outside of Discord.<br><br>
+                Think of KEXR as a bar with a jukebox.
+            </p>
         </div>
-        <div class="box">
+        <div class="box" id="discordiframecontainer">
             <p class="h2a">#talk</p>
             <br>
-            <iframe height="70%" width="70%" src="https://widgetbot.io/embed/386889104480141314/386889105008492548/0003/" />
+            <iframe id="discordiframe" src="https://widgetbot.io/embed/386889104480141314/386889105008492548/0003/" />
         </div>
     </div>
 </body>

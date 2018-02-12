@@ -1,5 +1,4 @@
 /* global rules */
-
 *
 {
     box-sizing: border-box;
@@ -7,124 +6,101 @@
     margin: 0;
 }
 
-body
+body, .wrapper
 {
-    overflow-x: hidden;
     overflow-y: overlay;
     width: 100vw;
     height: 100vh;
 }
 
-/* flex framework */
+/* backbone */
 
+/* flex */
 .wrapper
 {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-content: center;
+    align-content: flex-start;
 }
 
-.header, .bar, .box
-{
-    text-align: center;
-}
+/* block typesetting */
+.header, .bar, .box { text-align: center; }
 
 /* block colors */
-
-.header, .box
-{
-    background-color: #000;
-}
-
-.bar
-{
-    background-color: #fff;
-
-}
+.header, .box { background-color: #000; }
+.bar { background-color: #fff; }
 
 /* embeds & images */
+img, iframe { border: 1px solid #fff; }
 
-img, iframe
-{
-    border: 1px solid #fff;
-}
+/* hover effects */
+.extlink { opacity: 1; }
+.extlink:hover, .extlink:active { opacity: 0.75; }
 
-iframe
-{
-}
-
-.extlink
+/* unique element properties */
+#discordimg
 {
     border: 0;
-    opacity: 1;
+    height: 3em;
 }
 
-.extlink:hover, .extlink:active
+#discordiframe
 {
-    opacity: 0.75;
+    height: 70%;
+    width: 70%;
 }
 
 /* typograpy */
 
-h1
+/* fonts, font effects & kerning */
+h1, h2, .h2a
 {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
-    font-size: 4em;
     letter-spacing: 1px;
-    color: #fff;
-}
-
-h2
-{
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-    font-size: 1.25em;
-    letter-spacing: 1px;
-    color: #000;
-}
-
-.h2a
-{
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-    font-size: 1.25em;
-    letter-spacing: 1px;
-    color: #fff;
 }
 
 .pa
 {
-    text-align: left;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 1em;
-    color: #fff;
+    text-align: left;
 }
+
+/* font sizes */
+h1 { font-size: 4em; }
+h2, .h2a { font-size: 1.25em; }
+.pa { font-size: 1em; }
+
+/* font colors */
+h1, .h2a, .pa { color: #fff; }
+h2 { color: #000; }
 
 /* responsive design */
 
+/* responsive - mobile */
 @media only screen and (max-width: 600px)
 {
+    
 .header, .bar, .box
 {
     width: 100vw;
+    padding: 2.5%;
     height: auto;
 }
-.bar, .box
-{
-    box-sizing: border-box;
-    padding: 2%;
-}
-audio, iframe
-{
-    width: 80vw;
-}
+    
+.header { padding: 0; }
+audio, iframe { width: 80vw; }
+#discordiframecontainer { height: 50vh; }
+#discordiframe { height: 80%; }
+
 }
 
+/* responsive design - desktop */
 @media only screen and (min-width: 600px)
 {
+    
 .header
 {
     width: 100vw;
@@ -134,7 +110,6 @@ audio, iframe
 
 .bar
 {
-    white-space: nowrap;
     width: 50vw;
     height: 20vh;
     line-height: 10vh;
@@ -146,4 +121,5 @@ audio, iframe
     height: 60vh;
     padding: 2.5%;
 }
+    
 }
