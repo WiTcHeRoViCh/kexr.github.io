@@ -8,15 +8,16 @@
 
 body, .wrapper
 {
-    overflow-y: overlay;
     width: 100vw;
     height: 100vh;
 }
 
+body { overflow-y: overlay; }
+
 /* backbone */
 
 /* flex */
-.wrapper
+.wrapper, #wrapper-gallery
 {
     display: flex;
     flex-flow: row wrap;
@@ -39,6 +40,12 @@ img, iframe { border: 1px solid #fff; }
 .extlink:hover, .extlink:active { opacity: 0.75; }
 
 /* unique element properties */
+.gallery-img 
+{ 
+    height: 15%;
+    width: 15%; 
+}
+
 #discordimg
 {
     border: 0;
@@ -92,6 +99,8 @@ h2 { color: #000; }
     
 .header { padding: 0; }
 audio, iframe { width: 80vw; }
+#wrapper-gallery { justify-content: space-around; }
+.gallery-img { width: 100px; }
 #discordiframecontainer { height: 50vh; }
 #discordiframe { height: 80%; }
 
