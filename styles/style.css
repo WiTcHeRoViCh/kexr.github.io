@@ -1,74 +1,93 @@
-/* global rules */
-
-*
-{
-    box-sizing: border-box;
+body {
     padding: 0;
     margin: 0;
 }
 
-body
-{
-    overflow-x: hidden;
-    overflow-y: overlay;
-    width: 100vw;
-    height: 100vh;
-}
-
 /* flex framework */
 
-.wrapper
-{
+.wrapper {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: center;
+    position: absolute;
+    height: 100%;
 }
 
-.header, .bar, .box
-{
+.wrapper-element {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.bar, .box {
     text-align: center;
 }
 
 /* block colors */
 
-.header, .box
-{
+header, .box {
     background-color: #000;
 }
 
-.bar
-{
+.bar {
     background-color: #fff;
+    align-self: auto;
+    flex-basis: 300px;
+}
 
+.bar audio {
+    width: 100%;
+}
+
+.box {
+    flex-grow: 1;
+    padding: 15px;
+    flex-basis: 500px;
 }
 
 /* embeds & images */
 
-img, iframe
-{
+img, iframe {
     border: 1px solid #fff;
 }
 
-iframe
-{
+#wrapper-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    height: 400px;
+    overflow-y: scroll;
 }
 
-.extlink
-{
+.gallery-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+    align-self: flex-start;
+}
+
+iframe {
+}
+
+.extlink {
     border: 0;
     opacity: 1;
 }
 
-.extlink:hover, .extlink:active
-{
+.extlink:hover, .extlink:active {
     opacity: 0.75;
 }
 
 /* typograpy */
 
-h1
-{
+h1 {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 4em;
@@ -76,8 +95,7 @@ h1
     color: #fff;
 }
 
-h2
-{
+h2 {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 1.25em;
@@ -85,8 +103,7 @@ h2
     color: #000;
 }
 
-.h2a
-{
+.h2a {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 1.25em;
@@ -94,56 +111,10 @@ h2
     color: #fff;
 }
 
-.pa
-{
+.pa {
     text-align: left;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1em;
     color: #fff;
-}
-
-/* responsive design */
-
-@media only screen and (max-width: 600px)
-{
-.header, .bar, .box
-{
-    width: 100vw;
-    height: auto;
-}
-.bar, .box
-{
-    box-sizing: border-box;
-    padding: 2%;
-}
-audio, iframe
-{
-    width: 80vw;
-}
-}
-
-@media only screen and (min-width: 600px)
-{
-.header
-{
-    width: 100vw;
-    height: 20vh;
-    line-height: 20vh;
-}
-
-.bar
-{
-    white-space: nowrap;
-    width: 50vw;
-    height: 20vh;
-    line-height: 10vh;
-}
-    
-.box
-{
-    width: 50vw;
-    height: 60vh;
-    padding: 2.5%;
-}
 }
